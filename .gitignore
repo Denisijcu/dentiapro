@@ -1,0 +1,56 @@
+# ============================================================
+# DentiaPro — .gitignore
+# ============================================================
+
+# Secrets — NUNCA subir
+.env
+*.env
+!.env.example
+backend/.env
+xray-ai-service/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+*.log
+
+# Node / Angular
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/.env
+
+# Docker
+postgres_data/
+redis_data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Uploads locales
+uploads/
+media/
+
+# Alembic
+# (mantener versions/ pero ignorar __pycache__ dentro)
+backend/alembic/versions/__pycache__/
