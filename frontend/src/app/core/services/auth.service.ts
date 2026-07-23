@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs/operators';
 
+import { environment } from '../../../environments/environment';
+
 export interface User {
   id: number;
   clinic_id: number;
@@ -15,7 +17,9 @@ export interface User {
   avatar_url?: string;
 }
 
-const API = 'http://localhost:8000/api/v1';
+//const API = 'http://localhost:8000/api/v1';
+
+const API = environment.apiUrl;
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { environment } from '../../../environments/environment';
+
 export interface XRayAnalysis {
   id: number;
   patient_id: number;
@@ -18,7 +20,8 @@ export interface XRayAnalysis {
   created_at: string;
 }
 
-const API = 'http://localhost:8000/api/v1';
+//const API = 'http://localhost:8000/api/v1';
+const API = environment.apiUrl;
 
 @Injectable({ providedIn: 'root' })
 export class XrayService {

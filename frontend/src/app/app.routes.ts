@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
 import { roleGuard } from './core/guards/role.guard';
 
+import { NotFoundComponent } from './features/404/not-found.component';
+
 export const routes: Routes = [
   {
     path: 'login',
@@ -53,5 +55,9 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: '**', redirectTo: '' },
+ { 
+    path: '**', 
+    component: NotFoundComponent,
+    title: '404 - Sistema no encontrado'
+  },
 ];

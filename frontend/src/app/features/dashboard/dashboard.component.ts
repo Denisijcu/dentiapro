@@ -8,7 +8,9 @@ import { AppointmentService, Appointment } from '@core/services/appointment.serv
 import { forkJoin } from 'rxjs';
 import { catchError, of } from 'rxjs';
 
-const API = 'http://localhost:8000/api/v1';
+import { environment } from '../../../environments/environment';
+
+const API = environment.apiUrl;
 
 interface StatCard {
   label: string;
