@@ -16,7 +16,7 @@ import { environment } from '../../../environments/environment.prod';
 @Injectable({ providedIn: 'root' })
 export class FacturacionService {
   private readonly http = inject(HttpClient);
- private readonly base = `${environment.apiUrl}/api/v1`;
+ private readonly base = `${environment.apiUrl}`;
 
 
   // GET /api/v1/invoices/summary

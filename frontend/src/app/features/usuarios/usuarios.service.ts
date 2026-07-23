@@ -5,10 +5,12 @@ import {
   Usuario, NuevoUsuario, EditarUsuario, CambiarPasswordPayload
 } from './usuarios.models';
 
+import { environment } from '../../../environments/environment.prod';
+
 @Injectable({ providedIn: 'root' })
 export class UsuariosService {
   private readonly http = inject(HttpClient);
-  private readonly base = 'http://localhost:8000/api/v1';
+  private readonly base = `${environment.apiUrl}`;
 
   // GET /api/v1/users
   listar(): Observable<Usuario[]> {
