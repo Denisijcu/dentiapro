@@ -11,10 +11,13 @@ import {
   AnularFactura
 } from './facturacion.models';
 
+import { environment } from '../../../environments/environment.prod';
+
 @Injectable({ providedIn: 'root' })
 export class FacturacionService {
   private readonly http = inject(HttpClient);
-  private readonly base = 'http://localhost:8000/api/v1';
+ private readonly base = `${environment.apiUrl}/api/v1`;
+
 
   // GET /api/v1/invoices/summary
   getResumen(): Observable<ResumenFacturacion> {
